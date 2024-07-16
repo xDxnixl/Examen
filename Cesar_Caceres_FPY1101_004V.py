@@ -51,13 +51,13 @@ def ver_estadisticas(sueldos):
     promedio = sum(sueldos) / len(sueldos)
 
     # Media geométrica (para simplificar, calculada como promedio de logaritmos)
-    media_geom = sum([log(sueldo) for sueldo in sueldos]) / len(sueldos)
+    media_geom = sum([(sueldo) for sueldo in sueldos]) / len(sueldos)
 
     print("\nEstadísticas de Sueldos:")
     print(f"Sueldo más alto:\t${sueldo_max}")
     print(f"Sueldo más bajo:\t${sueldo_min}")
-    print(f"Promedio de sueldos:\t${promedio:.2f}")
-    print(f"Media geométrica:\t${exp(media_geom):.2f}")
+    print(f"Promedio de sueldos:\t${promedio:}")
+    print(f"Media geométrica:\t${(media_geom):}")
 
 # Función para generar reporte de sueldos
 def reporte_sueldos(sueldos):
@@ -114,7 +114,7 @@ def main():
                 reporte_sueldos(sueldos)
 
         elif opcion == '5':
-            print("\n¡Hasta luego!")
+            print("\n Realizado por Cesar Caceres \n¡Hasta luego!")
             break
 
         else:
